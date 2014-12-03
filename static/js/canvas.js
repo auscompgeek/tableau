@@ -31,7 +31,7 @@ var clickY = new Array();
 var clickDrag = new Array ();
 var paint;
 
-var ws = new WebSocket("ws://" + SERVER_IP + "/savecanvas/test");
+var ws = new WebSocket((location.protocol == "https:" ? "wss://" : "ws://") + location.host + "/savecanvas/test");
 
 $(document).ready(function (){
 context = document.getElementById ('tableauCanvas').getContext("2d");
